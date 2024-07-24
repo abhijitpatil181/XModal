@@ -5,11 +5,11 @@ const Modal = ({ children, open, onClose }) => {
   console.log("form", open);
 
   useEffect(() => {
+    debugger;
     const handleOutsideClick = (event) => {
-      // debugger;
-      // if (!event.target.closest(".modal-content") && open) {
-      //   onClose(); // Call onClose function passed as prop to close the modal
-      // }
+      if (!event.target.closest(".modal-content") && open) {
+        onClose(); // Call onClose function passed as prop to close the modal
+      }
     };
 
     // Add event listener when the modal is open

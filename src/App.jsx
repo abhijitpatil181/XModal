@@ -21,7 +21,10 @@ function App() {
       >
         <h1>User Details Modal</h1>
         <button
-          onClick={() => setOpen(true)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setOpen(true);
+          }}
           style={{
             padding: "0.5rem",
             width: "10rem",

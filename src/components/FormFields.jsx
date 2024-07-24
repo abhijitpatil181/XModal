@@ -14,6 +14,7 @@ const FormFields = ({ type, label, id, onChangeHandler, value }) => {
           type={type}
           onChange={(e) => onChangeHandler(e, value)}
           className="form-input"
+          required
         />
       </div>
     </>
