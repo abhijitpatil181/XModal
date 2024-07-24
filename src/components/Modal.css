@@ -1,5 +1,5 @@
 /* Modal overlay */
-.modal-overlay {
+.modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -10,12 +10,12 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-overlay.active{
+.modal.active{
   display: block;
 }
 
 /* Modal content/box */
-.modal {
+.modal-content {
   position: fixed;
   z-index: 2;
   left: 50%;

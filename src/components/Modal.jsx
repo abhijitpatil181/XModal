@@ -1,12 +1,33 @@
 import "./Modal.css";
-const Modal = ({ children, open }) => {
+import { useEffect } from "react";
+
+const Modal = ({ children, open, onClose }) => {
   console.log("form", open);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      // debugger;
+      // if (!event.target.closest(".modal-content") && open) {
+      //   onClose(); // Call onClose function passed as prop to close the modal
+      // }
+    };
+
+    // Add event listener when the modal is open
+    if (open) {
+      document.addEventListener("click", handleOutsideClick);
+    }
+
+    // Clean up event listener when component unmounts or modal closes
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [open, onClose]);
 
   return (
     <>
       {open && (
-        <div className="modal-overlay active">
-          <div className="modal">{children}</div>
+        <div className="modal active">
+          <div className="modal-content">{children}</div>
         </div>
       )}
     </>

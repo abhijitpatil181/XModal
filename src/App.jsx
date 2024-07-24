@@ -5,6 +5,10 @@ import { useState } from "react";
 function App() {
   const [open, setOpen] = useState(false);
 
+  const onClose = () => {
+    setOpen(false);
+  };
+
   return (
     <>
       <div
@@ -32,7 +36,7 @@ function App() {
         </button>
       </div>
 
-      <Modal open={open}>
+      <Modal open={open} onClose={onClose}>
         <Form />
       </Modal>
     </>
