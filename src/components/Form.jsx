@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FormFields from "./FormFields";
+import "./Form.css";
 
 const formLabels = [
   { id: "username", label: "Username", type: "text", value: "username" },
@@ -44,15 +45,7 @@ const Form = () => {
             Fill Details
           </h3>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            rowGap: "1rem",
-            flexDirection: "column",
-          }}
-        >
+        <div className="submit-button">
           {formLabels.map((label) => (
             <FormFields
               key={label.id}
