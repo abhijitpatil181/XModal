@@ -28,15 +28,11 @@ const Form = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (!(formData.phone.length === 10)) {
-      window.alert(
-        "Invalid phone number. Please enter a 10-digit phone number."
-      );
+      window.alert("Invalid phone number");
     }
 
     if (!(new Date(formData.dateOfBirth) <= new Date())) {
-      window.alert(
-        "Invalid date of birth. Date of birth can not be in the future."
-      );
+      window.alert("Invalid date of birth");
     }
   };
 
