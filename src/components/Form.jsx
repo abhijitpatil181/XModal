@@ -29,13 +29,13 @@ const Form = () => {
     e.preventDefault();
     if (!(formData.phone.length === 10)) {
       window.alert(
-        "Invalid phone number.Please enter a 10-digit phone number."
+        "Invalid phone number. Please enter a 10-digit phone number."
       );
     }
 
     if (!(new Date(formData.dateOfBirth) <= new Date())) {
       window.alert(
-        "Invalid date of birth.Date of birth can not be in the future."
+        "Invalid date of birth. Date of birth can not be in the future."
       );
     }
   };
